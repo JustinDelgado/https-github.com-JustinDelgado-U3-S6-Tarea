@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario con Barra de Progreso</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light py-5">
+
+<div class="container bg-white p-4 rounded shadow" style="max-width: 720px;">
+  <h1 class="text-center mb-4">Formulario con Barra de Progreso</h1>
+
+  <!-- Barra de progreso -->
+  <div class="progress mb-4">
+    <div id="barraProgreso" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombres:</label>
+    <input type="text" class="form-control campo" id="nombre" placeholder="Ingresa tu nombre">
+  </div>
+  
+  <div class="mb-3">
+    <label for="apellido" class="form-label">Apellidos:</label>
+    <input type="text" class="form-control campo" id="apellido" placeholder="Ingresa tu apellido">
+  </div>
+
+  <div class="mb-3">
+    <label for="correo" class="form-label">Correo Electrónico:</label>
+    <input type="email" class="form-control campo" id="correo" placeholder="Ingresa tu correo electrónico">
+  </div>
+
+  <div class="mb-3">
+    <label for="imagen" class="form-label">Selecciona una imagen:</label>
+    <input class="form-control" type="file" id="imagen" accept="image/*">
+  </div>
+
+  <div id="preview" class="text-center mb-3">
+    <p class="text-muted">Aquí aparecerá la miniatura de la imagen seleccionada.</p>
+  </div>
+
+  <div class="mb-3">
+    <label for="comentario" class="form-label">Comentario:</label>
+    <textarea class="form-control campo" id="comentario" rows="3" placeholder="Escribe un comentario..."></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="colorFavorito" class="form-label">Color Favorito:</label>
+    <select class="form-select campo" id="colorFavorito">
+      <option value="">-- Selecciona un color --</option>
+      <option value="Rojo">Rojo</option>
+      <option value="Verde">Verde</option>
+      <option value="Azul">Azul</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label d-block">Género:</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input campo-radio" type="radio" id="masculino" name="genero" value="Masculino">
+        <label class="form-check-label" for="masculino">Masculino</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input campo-radio" type="radio" id="femenino" name="genero" value="Femenino">
+        <label class="form-check-label" for="femenino">Femenino</label>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label class="form-label d-block">Intereses:</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input campo-check" type="checkbox" id="interes1" value="Deportes">
+        <label class="form-check-label" for="interes1">Deportes</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input campo-check" type="checkbox" id="interes2" value="Música">
+        <label class="form-check-label" for="interes2">Música</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="edad" class="form-label">Edad:</label>
+    <input type="number" class="form-control campo" id="edad" min="1" max="100" placeholder="Edad">
+  </div>
+  
+  <button class="btn btn-primary d-block mx-auto" onclick="agregarFila()">Enviar</button>
+  
+</div>
+
+<div style="height: 3rem;"></div>
+
+<div class="container bg-white p-4 rounded shadow" style="max-width: 850px;">
+  <h2 class="text-center">Datos Ingresados</h2>
+  <table id="tablaDatos" class="table table-striped mt-4">
+    <thead class="table-dark">
+      <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Correo Electrónico</th>
+        <th>Comentario</th>
+        <th>Color Favorito</th>
+        <th>Género</th>
+        <th>Intereses</th>
+        <th>Edad</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Filas agregadas aparecerán aquí -->
+    </tbody>
+  </table>
+</div>
+<script src="./js/Formulario.js"> </script>
+
+<footer class="bg-light text-center text-lg-start mt-4">
+  <div class="text-center mt-4">
+    <p class="text-muted">Desarrollado por Justin Gabriel Delgado Pilay</p>
+    <p class="text-muted">Universidad de Guayaquil</p>
+    <p class="text-muted">Facultad de Ciencias matematicas y fisicas</p>
+    <p class="text-muted">Ingenieria en Sistemas Computacionales</p>
+    <p class="text-muted">Materia: Desarrollo de aplicaciones web</p>
+    <p class="text-muted">Docente: JOHANNA ZUMBA GAMBOA</p>
+    <p class="text-muted">Curso: SOF-MA-6-3</p>
+    <p class="text-muted">2025</p>
+  </div>
+
+</footer>
+</body>
+</html>
